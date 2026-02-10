@@ -1,0 +1,207 @@
+/* Общие настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+.clearfix { clear: both; }
+
+/* === ГЛОБАЛЬНЫЙ ФИКС ИЗОБРАЖЕНИЙ === */
+/* Теперь любая картинка внутри твоих блоков будет сжиматься правильно */
+.sphere-img img, 
+.uni-box img, 
+.gal-card img, 
+.f-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет блок, не растягиваясь */
+    display: block;
+}
+
+/* HEADER */
+.main-header {
+    background-color: #1a1a1a;
+    padding: 25px 0;
+    border-bottom: 2px solid #0056b3;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo-box {
+    float: left;
+    width: 65px;
+    height: 65px;
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    line-height: 65px;
+    font-weight: 800;
+    font-size: 26px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+
+.header-title {
+    float: right;
+    color: #0056b3;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 65px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ОБЩИЙ КОНТЕЙНЕР СЕКЦИЙ */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.section-headline {
+    color: #4dabf7;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+/* СФЕРЫ (БЛОК 1) */
+.sphere-card {
+    float: left;
+    width: 48%;
+    margin: 1%;
+    background-color: #252525;
+    padding: 20px;
+    height: 180px;
+    border-left: 4px solid #0056b3;
+    transition: 0.3s;
+    overflow: hidden; /* Чтобы ничего не вылетало */
+}
+
+.sphere-card:hover { background-color: #2d2d2d; transform: translateY(-3px); }
+
+.sphere-img {
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color: #333;
+    /* Центрирование для текста-заглушки IMAGE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #666;
+    overflow: hidden;
+}
+
+.sphere-info {
+    float: right;
+    width: 65%;
+}
+
+.sphere-info h3 { color: #4dabf7; font-size: 18px; margin-bottom: 10px; }
+.sphere-info p { font-size: 13px; color: #bbb; height: 60px; overflow: hidden; }
+.stack { display: block; margin-top: 10px; font-size: 11px; color: #0056b3; font-weight: bold; }
+
+/* ВУЗЫ (БЛОК 2) - ШАХМАТКА */
+.uni-box {
+    float: left;
+    width: 23%;
+    height: 150px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.b-img { background-color: #0056b3; color: white; font-weight: bold; }
+.b-txt { background-color: #252525; }
+.b-txt h4 { color: #4dabf7; margin-bottom: 8px; }
+.b-txt p { font-size: 12px; color: #aaa; }
+
+/* ГАЛЕРЕЯ (БЛОК 3) */
+.gal-card {
+    float: left;
+    width: 23%;
+    height: 150px;
+    margin: 1%;
+    background-color: #0056b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+.gal-card:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    background-color: #4dabf7;
+    color: #121212;
+}
+
+/* ФАКУЛЬТЕТЫ (БЛОК 4) */
+.faculty-item {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.f-img {
+    float: left;
+    width: 35%;
+    height: 450px;
+    background-color: #ffffff;
+    border: 1px solid #0056b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #0056b3;
+    overflow: hidden;
+}
+
+.f-text {
+    float: right;
+    width: 60%;
+}
+
+.f-text h3 { color: #4dabf7; margin-bottom: 15px; }
+.f-text p { font-size: 15px; margin-bottom: 15px; color: #ccc; }
+.spec-list { list-style: none; font-size: 14px; }
+.spec-list li { margin-bottom: 5px; }
+.spec-list strong { color: #0056b3; }
+
+/* FOOTER */
+.main-footer {
+    background-color: #1a1a1a;
+    padding: 40px;
+    text-align: center;
+    border-top: 2px solid #333;
+    color: #666;
+}
