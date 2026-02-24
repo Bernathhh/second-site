@@ -1,0 +1,295 @@
+/* -отступы глобально */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0;
+}
+
+.clearfix { 
+    clear: both; 
+}
+
+.sphere-img img, 
+.uni-box img, 
+.gal-card img,
+.stack-main-image img, 
+.stack-side-image img {
+    width: 100%;
+    height: 100%;
+    /* Картинка заполняет блок, обрезая излишки, но не сплющивается и не искажается. */
+    object-fit: cover;  
+    object-position: center; 
+    /* убирает микроскопический пустой зазор в несколько пикселей */
+    vertical-align: top; 
+}
+
+/* HEADER */
+.main-header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 2px solid #0056b3;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo-box {
+    float: left;
+    width: 65px;
+    height: 45px; 
+    padding-top: 20px; 
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    /* жирность шрифта */
+    font-weight: 800;
+    font-size: 26px;
+    border-radius: 8px;
+}
+
+.header-title {
+    float: right;
+    color: #0056b3;
+    font-size: 32px; 
+    /* жирность шрифта */
+    font-weight: 300;
+    margin-top: 16px; 
+}
+
+/* ОБЩИЙ КОНТЕЙНЕР СЕКЦИЙ */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px 0;
+    background-color: #1e1e1e;
+    border-radius: 4px;
+}
+
+
+.section-headline {
+    color: #4dabf7;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    /* тонкая темная линия под заголовком */
+    border-bottom: 1px solid #333;
+}
+
+/* СФЕРЫ (БЛОК 1) */
+.sphere-card {
+    float: left;
+    width: 40%;
+    margin: 0 1%;
+    padding: 15px 3%;
+    background-color: #252525;
+    height: 180px; 
+    border-left: 4px solid #0056b3;
+    /* анимация */
+    transition: 0.3s;
+}
+
+.sphere-card:hover { 
+    background-color: #2d2d2d;
+    /* приподнимает карточку вверх на 3 пикселя.  */
+    transform: translateY(-3px); 
+}
+
+.sphere-img {
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: #333;
+}
+
+.sphere-info {
+    float: right;
+    width: 70%;
+    height: 100%;
+}
+
+.sphere-info h3 { 
+    color: #4dabf7; 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+}
+
+.sphere-info p { 
+    font-size: 13px; 
+    color: #bbb; 
+    margin-bottom: 10px; 
+}
+
+
+/* ВУЗЫ (БЛОК 2) */
+.uni-box {
+    float: left;
+    width: 22%;
+    margin: 10px 1%;
+    padding: 0;
+    height: 250px; 
+    /* тонкая темная линия */
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.b-img { 
+    background-color: #0056b3; 
+}
+
+.b-txt { 
+    background-color: #252525;
+}
+
+.b-txt h4 { 
+    color: #4dabf7; 
+    font-size: 16px; 
+    padding-top: 35px; 
+    margin-bottom: 10px; 
+}
+
+.b-txt p { 
+    font-size: 12px; 
+    color: #aaa; 
+    padding: 0 10px;
+}
+
+
+/* ГАЛЕРЕЯ (БЛОК 3) */
+.gal-card {
+    float: left;
+    width: 22%;
+    margin: 10px 1%;
+    height: 250px; 
+    background-color: #0056b3;
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+.gal-card:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    background-color: #4dabf7;
+}
+
+/* БЛОК: СТЕК ТЕХНОЛОГИЙ */
+
+.stack-column-left, 
+.stack-column-center, 
+.stack-column-right {
+    float: left;
+    margin: 0 1%;
+}
+
+.stack-column-left, 
+.stack-column-right { 
+    width: 25%; 
+}
+
+.stack-column-center { 
+    width: 44%; 
+}
+
+.stack-main-image { 
+    height: 320px; 
+    background-color: #333; 
+}
+
+.stack-side-image { 
+    height: 155px; 
+    background-color: #333; 
+    margin-bottom: 10px; 
+}
+
+.stack-grid-item {
+    float: left;
+    width: 31%;
+    margin: 0 1% 10px 1%;
+    height: 100px; 
+    background-color: #252525;
+    /* тонкая темная линия */
+    border: 1px solid #333;
+    text-align: center;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.stack-grid-item h4 { 
+    color: #fff; 
+    font-size: 16px; 
+    padding-top: 10px; 
+    margin-bottom: 2px; 
+}
+
+.tech-sphere { 
+    color: #4dabf7; 
+    font-size: 11px; 
+    margin-bottom: 2px; 
+    font-weight: bold; 
+}
+
+.tech-year, .tech-author { 
+    color: #888; 
+    font-size: 10px; 
+    margin-bottom: 1px; 
+}
+
+.stack-side-text {
+    height: 115px; 
+    padding-top: 40px;
+    background-color: #252525;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.stack-side-text h4 { 
+    color: #4dabf7; 
+    font-size: 16px; 
+    margin-bottom: 10px;
+}
+
+.stack-side-text p { 
+    color: #aaa; 
+    font-size: 12px; 
+    padding: 0 15px; 
+}
+
+/* ЗАКЛЮЧЕНИЕ */
+.conclusion-content {
+    text-align: center;
+    padding: 0 10%;
+}
+
+.conclusion-content p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.conclusion-content b {
+    color: #fff;
+}
+
+.conclusion-content .cta-text {
+    color: #4dabf7;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid #333;
+    color: #666;
+}
